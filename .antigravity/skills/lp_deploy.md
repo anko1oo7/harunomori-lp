@@ -3,7 +3,7 @@
 このスキルは、**STUDIO 玻瑠の杜** のランディングページ（LP）を更新し、GitHub経由でCloudflare Pagesに自動デプロイするための手順を定義します。
 
 ## 対象プロジェクト
-- **ディレクトリ**: `apps/mv-lp`
+- **場所**: このディレクトリ自体（リポジトリルート）
 - **デプロイ先**: [https://harunomori-lp.pages.dev](https://harunomori-lp.pages.dev)
 - **GitHubリポジトリ**: `https://github.com/anko1oo7/harunomori-lp.git`
 
@@ -12,6 +12,7 @@
 ### 1. 同期 (Sync)
 修正を開始する前に、必ずリモートリポジトリの最新状態を取り込みます。
 ```powershell
+# リポジトリのルート（apps/mv-lp）で実行
 git pull origin main
 ```
 
