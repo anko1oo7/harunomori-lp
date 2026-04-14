@@ -21,7 +21,7 @@ import {
   X,
   Feather,
 } from "lucide-react";
-import Link from "next/link";
+import { works } from "@/lib/works";
 
 const plans = [
   {
@@ -43,33 +43,6 @@ const plans = [
     delivery: "1ヶ月〜",
     note: "月に1件限定。一曲の世界観を完遂させる。",
     premium: true,
-  },
-];
-
-const works = [
-  {
-    id: "maybe",
-    title: "Maybe - Full animation Ver. High-Speed GO Million",
-    embedId: "f-_RxbNK8lg",
-    tags: ["Full Animation", "Rock", "Speedy"],
-  },
-  {
-    id: "sakuya",
-    title: "咲耶 - 『出現』(Sakuya - L' Apparition)",
-    embedId: "hmSF1UrEovs",
-    tags: ["Redesign", "Conceptual", "Artistic"],
-  },
-  {
-    id: "mominoki",
-    title: "もみの木とひかりのうた - Harufloria",
-    embedId: "ix0H8ERAhz0",
-    tags: ["自主制作", "ティザー動画サンプル", "3人歌唱演出"],
-  },
-  {
-    id: "tiny-christmas",
-    title: "Tiny Christmas in a Glass - Harufloria",
-    embedId: "kqHULjinbr8",
-    tags: ["自主制作", "60秒MVサンプル", "ミニチュア演出"],
   },
 ];
 
@@ -154,7 +127,7 @@ export default function Home() {
                 </div>
                 <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] font-bold text-[var(--ink-soft)]">
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> フル尺: 2件進行中 (6月〜予約可)</span>
+                  <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> フル尺: 2件進行中 (6月着手分から予約可)</span>
                   <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> 1コーラス: 要相談</span>
                   <span className="flex items-center gap-1.5"><span className="text-[var(--leaf-accent)]">●</span> ローコスト: 受注可</span>
                 </div>

@@ -1,11 +1,4 @@
-import React from "react";
-import {
-  ArrowLeft,
-  Youtube,
-  Sparkles,
-  CirclePlay,
-  BadgeCheck,
-} from "lucide-react";
+import { works } from "@/lib/works";
 
 export default function Portfolio() {
   return (
@@ -32,118 +25,65 @@ export default function Portfolio() {
       <section className="px-6 pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Project 1 */}
-            <div className="reveal space-y-6">
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white aspect-video relative group">
-                 <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/f-_RxbNK8lg" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen
-                  ></iframe>
-              </div>
-              <div className="px-4">
-                <div className="flex items-center gap-2 text-[var(--accent-strong)] font-bold text-sm uppercase tracking-wider">
-                  <BadgeCheck className="h-4 w-4" />
-                  フル尺MV (Full Animation)
+            {works.map((work, index) => (
+              <div 
+                key={work.id} 
+                className="reveal space-y-6" 
+                style={{ animationDelay: `${index % 2 === 0 ? '0s' : '0.1s'}` }}
+              >
+                <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white aspect-video relative group">
+                   <iframe 
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${work.embedId}`} 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen
+                    ></iframe>
                 </div>
-                <h3 className="mt-2 text-2xl font-black">Maybe - Full animation Ver. High-Speed GO Million (feat. XXX)</h3>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <span className="px-3 py-1 rounded-full bg-[var(--sakura)] text-[var(--accent-strong)] text-xs font-bold border border-[var(--accent-soft)]">1キャラ（キャラデザ含む）</span>
-                  <span className="px-3 py-1 rounded-full bg-[var(--sky)] text-[var(--sky-accent)] text-xs font-bold border border-[var(--sky-accent)]/20">雰囲気：ロック、疾走感</span>
-                  <span className="px-3 py-1 rounded-full bg-[var(--leaf)] text-[var(--leaf-accent)] text-xs font-bold border border-[var(--leaf-accent)]/20">おまかせ制作</span>
+                <div className="px-4">
+                  <div className="flex items-center gap-2 font-bold text-sm uppercase tracking-wider" style={{ color: work.categoryStyle }}>
+                    {work.category === "フル尺MV" ? (
+                      <BadgeCheck className="h-4 w-4" />
+                    ) : (
+                      <Sparkles className="h-4 w-4" />
+                    )}
+                    {work.category}
+                  </div>
+                  <h3 className="mt-2 text-2xl font-black">{work.title}</h3>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {work.tags.map((tag, i) => (
+                      <span 
+                        key={i} 
+                        className="px-3 py-1 rounded-full text-xs font-bold border"
+                        style={{ 
+                          backgroundColor: tag === "自主制作作品" ? "var(--sakura)" : (tag.includes("フル") ? "var(--sakura)" : (tag.includes("ローコスト") ? "slate-100" : "var(--sky)")),
+                          color: tag === "自主制作作品" ? "var(--accent-strong)" : (tag.includes("フル") ? "var(--accent-strong)" : (tag.includes("ローコスト") ? "var(--muted)" : "var(--sky-accent)")),
+                          borderColor: tag === "自主制作作品" ? "var(--accent-soft)" : (tag.includes("フル") ? "var(--accent-soft)" : (tag.includes("ローコスト") ? "var(--line)" : "rgba(var(--sky-accent-rgb), 0.2)"))
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-6 text-[var(--ink-soft)] leading-relaxed font-medium">
+                    {work.description.split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
+                  </p>
                 </div>
-                <p className="mt-6 text-[var(--ink-soft)] leading-relaxed font-medium">
-                  制作指針として「ロック」「疾走感」というキーワードとキャラクターの基本イメージをいただき、
-                  それ以外の構成や演出はすべて「おまかせ」で制作を担当しました。<br />
-                  AIによる背景生成と、ダイナミックなキャラクターアニメーションを楽曲のスピード感に合わせて統合。
-                  一人のクリエイターとしての感性を注ぎ込み、楽曲の世界観をフルアニメーションで完遂させた作品です。
-                </p>
               </div>
-            </div>
-
-            {/* Project 2 - Sakuya */}
-            <div className="reveal space-y-6" style={{ animationDelay: '0.1s' }}>
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white aspect-video relative group">
-                 <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/hmSF1UrEovs" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen
-                  ></iframe>
-              </div>
-              <div className="px-4">
-                <div className="flex items-center gap-2 text-[var(--sky-accent)] font-bold text-sm uppercase tracking-wider">
-                  <BadgeCheck className="h-4 w-4" />
-                  フル尺MV (Conceptual Animation)
-                </div>
-                <h3 className="mt-2 text-2xl font-black">咲耶 - 『出現』(Sakuya - L' Apparition)</h3>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <span className="px-3 py-1 rounded-full bg-[var(--sky)] text-[var(--sky-accent)] text-xs font-bold border border-[var(--sky-accent)]/20">キャラリデザイン</span>
-                  <span className="px-3 py-1 rounded-full bg-[var(--sakura)] text-[var(--accent-strong)] text-xs font-bold border border-[var(--accent-soft)]">再解釈：ギュスターヴ・モロー</span>
-                  <span className="px-3 py-1 rounded-full bg-[var(--leaf)] text-[var(--leaf-accent)] text-xs font-bold border border-[var(--leaf-accent)]/20">おまかせ・数回修正</span>
-                </div>
-                <p className="mt-6 text-[var(--ink-soft)] leading-relaxed font-medium">
-                  既存のキャラクターを楽曲の象徴的な世界観に合わせてリデザイン。
-                  ギュスターヴ・モローの傑作『出現』をインスピレーションの源泉として共有いただき、
-                  その退廃的で幻想的な空気感を現代のAI技術で再解釈しました。<br />
-                  「おまかせ」の信頼を軸に、細部への数回のこだわりを経て完成。
-                  アーティストの持つ哲学を、一枚の絵画から一本のアニメーションへと昇華させた作品です。
-                </p>
-              </div>
-            </div>
-
-            {/* Project 3 - Mominoki (Independent) */}
-            <div className="reveal space-y-6">
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white aspect-video relative group">
-                 <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/ix0H8ERAhz0" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen
-                  ></iframe>
-              </div>
-              <div className="px-4">
-                <div className="flex items-center gap-2 text-[var(--leaf-accent)] font-bold text-sm uppercase tracking-wider">
-                  <Sparkles className="h-4 w-4" />
-                  ローコストMV (Sample)
-                </div>
-                <h3 className="mt-2 text-2xl font-black">もみの木とひかりのうた - Harufloria</h3>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <span className="px-3 py-1 rounded-full bg-[var(--leaf)] text-[var(--leaf-accent)] text-xs font-bold border border-[var(--leaf-accent)]/20">自主制作作品</span>
-                  <span className="px-3 py-1 rounded-full bg-slate-100 text-[var(--muted)] text-xs font-bold border border-[var(--line)]">ローコストMV作例（〜60秒）</span>
-                  <span className="px-3 py-1 rounded-full bg-[var(--sakura)] text-[var(--accent-strong)] text-xs font-bold border border-[var(--accent-soft)]">3人歌唱演出</span>
-                  <span className="px-3 py-1 rounded-full bg-slate-100 text-[var(--muted)] text-xs font-bold border border-[var(--line)]">制作期間：3日〜1週間程度</span>
-                </div>
-                <p className="mt-6 text-[var(--ink-soft)] leading-relaxed font-medium">
-                  クリスマス用に制作した楽曲に映像を付与した、短尺のローコストMVの作例です。
-                  3人のキャラクターが楽しげに合唱しているような演出のサンプルとして制作しました。<br />
-                  短期間での制作ながら、楽曲の温かい雰囲気を視覚的に補完する構成となっています。
-                </p>
-              </div>
-            </div>
-
-            {/* Project 4 - Soshun no Gekkan (Independent) */}
-            <div className="reveal space-y-6" style={{ animationDelay: '0.1s' }}>
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white aspect-video relative group">
-                 <iframe 
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/RcZ0UJSpADo" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen
-                  ></iframe>
-              </div>
-              <div className="px-4">
-                <div className="flex items-center gap-2 text-[var(--sakura-accent)] font-bold text-sm uppercase tracking-wider">
-                  <Sparkles className="h-4 w-4" />
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+les className="h-4 w-4" />
                   ローコストMV (Sample)
                 </div>
                 <h3 className="mt-2 text-2xl font-black">【short Anime MV】 早春の月冠 - Harufloria</h3>
