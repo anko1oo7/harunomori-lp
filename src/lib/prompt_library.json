@@ -1,0 +1,63 @@
+{
+  "camera_angles": [
+    "front view", "side view", "profile view", "back view", "from behind", "three-quarter view",
+    "low angle", "from below", "high angle", "from above", "bird's-eye view", "worm's-eye view", "dutch angle"
+  ],
+  "camera_distance": [
+    "extreme close-up", "close-up", "bust shot", "waist shot", "full body shot", "long shot", "extreme long shot"
+  ],
+  "lighting": [
+    "cinematic lighting", "volumetric lighting", "god rays", "backlight", "rim light", "top light",
+    "side light", "neon glow", "soft diffused light", "prismatic light", "bloom lighting", "anamorphic lens flare"
+  ],
+  "special_effects": [
+    "glitch art effect", "double exposure", "VHS tape quality", "CRT scanlines", "selective color",
+    "fisheye lens effect", "visual compression", "tilt-shift photography", "kaleidoscope mirror effect"
+  ],
+  "compositions": [
+    "three layered composition", "foreground sharp focus", "midground main character", "background atmospheric perspective", "depth of field"
+  ],
+  "expressions": {
+    "happy": ["giggling", "teasing smile", "joyful expression", "bright smile"],
+    "sad": ["watery eyes", "pout", "melancholy expression", "tears in eyes"],
+    "cool": ["jitome", "doyagao", "confidently smiling", "sharp gaze"],
+    "emotional": ["bluch", "surprised expression", "intense gaze"]
+  },
+  "keywords_map": {
+    "雨": {
+      "scene": "rainy day, puddle on the ground, wet surfaces, rainy window",
+      "action": "holding an umbrella, looking at the rain, walking through puddles",
+      "camera": "low angle, reflection in puddle"
+    },
+    "夜": {
+      "scene": "night city, neon lights, starry sky, midnight moon",
+      "action": "standing under a street lamp, looking at the stars",
+      "camera": "side light, silhouette"
+    },
+    "空": {
+      "scene": "vast blue sky, white fluffy clouds, sunset glow, floating in the air",
+      "action": "looking up at the sky, reaching for the clouds",
+      "camera": "high angle, bird's-eye view"
+    },
+    "花": {
+      "scene": "blooming flowers, flower petals dancing in the wind, cherry blossoms",
+      "action": "surrounded by flowers, holding a flower",
+      "camera": "close-up, soft focus"
+    },
+    "海": {
+      "scene": "beautiful beach, blue ocean waves, sunset over the sea, underwater world",
+      "action": "standing on the shore, swimming in the sea",
+      "camera": "long shot, horizon line"
+    },
+    "夏": {
+      "scene": "sunny summer day, dazzling sunlight, sunflowers, cicadas buzzing",
+      "action": "wiping sweat, drinking cold soda",
+      "camera": "lens flare, bright exposure"
+    },
+    "冬": {
+      "scene": "snowy landscape, falling snow, frosted trees, winter breath",
+      "action": "wearing a scarf, shivering in the cold",
+      "camera": "soft diffused light, cool tones"
+    }
+  }
+}

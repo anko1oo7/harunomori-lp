@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  /* Bright Spring Palette */
+  --bg: #ffffff;
+  --bg-subtle: #f8fafc;
+  --sakura: #fff5f7;
+  --sakura-accent: #ff8fa3;
+  --leaf: #f2fdf5;
+  --leaf-accent: #6ee7b7;
+  --sky: #f0f9ff;
+  --sky-accent: #7dd3fc;
+  
+  --panel: rgba(255, 255, 255, 0.7);
+  --ink: #1e293b;
+  --ink-soft: #475569;
+  --muted: #94a3b8;
+  --line: rgba(226, 232, 240, 0.8);
+  
+  --accent-soft: #fff1f2;
+  --accent: #fda4af;
+  --accent-strong: #fb7185;
+  --accent-deep: #e11d48;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: "Outfit", "Inter", "Hiragino Maru Gothic ProN", "M PLUS Rounded 1c", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background: 
+    radial-gradient(circle at 10% 10%, var(--sakura), transparent 40%),
+    radial-gradient(circle at 90% 20%, var(--leaf), transparent 35%),
+    radial-gradient(circle at 50% 50%, var(--sky), transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: var(--panel);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--line);
+}
+
+.hero-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-shell::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 40%;
+  height: 60%;
+  background: radial-gradient(circle, var(--sakura-accent) 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: -1;
+  animation: float 20s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  from { transform: translate(0, 0); }
+  to { transform: translate(10%, 15%); }
+}
+
+.section-heading p {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.section-heading h2 {
+  margin: 0.75rem 0 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.section-heading.left {
+  text-align: left;
+}
+
+.section-heading:not(.left) {
+  text-align: center;
+}
+
+.value-card {
+  border-radius: 32px;
+  background: var(--bg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.value-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.value-card strong {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-strong);
+}
+
+.scope-card {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: all 0.3s ease;
+}
+
+.scope-card:hover {
+  background: white;
+  border-color: var(--accent);
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 24px;
+  background: white;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--line);
+}
+
+/* Animations */
+.reveal {
+  animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gentle-swing {
+  0% { transform: scale(1) rotate(-5deg); }
+  50% { transform: scale(1.05) rotate(5deg); }
+  100% { transform: scale(1) rotate(-5deg); }
+}

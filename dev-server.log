@@ -1,0 +1,76 @@
+
+> mv-lp@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.3.29:3000
+
+✓ Starting...
+Creating turbopack project {
+  dir: 'C:\\Users\\harmo\\remotion-projects\\remotion-projects\\apps\\mv-lp',
+  testMode: true
+}
+✓ Ready in 820ms
+ GET / 200 in 675ms (compile: 499ms, render: 176ms)
+ GET / 200 in 113ms (compile: 5ms, render: 108ms)
+ GET / 200 in 135ms (compile: 6ms, render: 129ms)
+✓ Compiled in 315ms
+✓ Compiled in 67ms
+ GET / 200 in 123ms (compile: 61ms, render: 62ms)
+ GET / 200 in 228ms (compile: 6ms, render: 222ms)
+ GET / 200 in 115ms (compile: 5ms, render: 110ms)
+ GET / 200 in 204ms (compile: 82ms, render: 122ms)
+ GET / 200 in 204ms (compile: 132ms, render: 73ms)
+ GET / 200 in 230ms (compile: 4ms, render: 226ms)
+ GET / 200 in 269ms (compile: 63ms, render: 206ms)
+ GET / 200 in 140ms (compile: 6ms, render: 134ms)
+ GET / 200 in 283ms (compile: 5ms, render: 279ms)
+ GET / 200 in 171ms (compile: 58ms, render: 113ms)
+ GET / 200 in 71ms (compile: 3ms, render: 68ms)
+✓ Compiled in 70ms
+ GET / 200 in 707ms (compile: 37ms, render: 670ms)
+ GET / 200 in 708ms (compile: 102ms, render: 606ms)
+ GET / 200 in 528ms (compile: 50ms, render: 477ms)
+ GET / 200 in 530ms (compile: 5ms, render: 525ms)
+ GET / 200 in 539ms (compile: 51ms, render: 488ms)
+ GET / 200 in 541ms (compile: 6ms, render: 535ms)
+ GET / 200 in 521ms (compile: 5ms, render: 516ms)
+ GET / 200 in 521ms (compile: 42ms, render: 479ms)
+ GET / 200 in 435ms (compile: 47ms, render: 388ms)
+ GET / 200 in 437ms (compile: 6ms, render: 431ms)
+ GET / 200 in 340ms (compile: 4ms, render: 335ms)
+ GET / 200 in 341ms (compile: 51ms, render: 290ms)
+ GET / 200 in 213ms (compile: 7ms, render: 206ms)
+ GET / 200 in 211ms (compile: 44ms, render: 168ms)
+ GET / 200 in 113ms (compile: 44ms, render: 69ms)
+ GET / 200 in 118ms (compile: 7ms, render: 111ms)
+✓ Compiled in 53ms
+ GET / 200 in 679ms (compile: 61ms, render: 617ms)
+ GET / 200 in 681ms (compile: 111ms, render: 570ms)
+ GET / 200 in 599ms (compile: 5ms, render: 594ms)
+ GET / 200 in 600ms (compile: 49ms, render: 551ms)
+ GET / 200 in 515ms (compile: 4ms, render: 511ms)
+ GET / 200 in 472ms (compile: 6ms, render: 466ms)
+ GET / 200 in 509ms (compile: 4ms, render: 505ms)
+ GET / 200 in 552ms (compile: 6ms, render: 546ms)
+ GET / 200 in 554ms (compile: 5ms, render: 549ms)
+ GET / 200 in 559ms (compile: 6ms, render: 553ms)
+ GET / 200 in 525ms (compile: 5ms, render: 520ms)
+ GET / 200 in 485ms (compile: 10ms, render: 475ms)
+ GET / 200 in 441ms (compile: 4ms, render: 438ms)
+ GET / 200 in 442ms (compile: 43ms, render: 399ms)
+ GET / 200 in 353ms (compile: 42ms, render: 310ms)
+ GET / 200 in 356ms (compile: 7ms, render: 349ms)
+ GET / 200 in 257ms (compile: 43ms, render: 214ms)
+ GET / 200 in 259ms (compile: 4ms, render: 255ms)
+ GET / 200 in 169ms (compile: 4ms, render: 165ms)
+ GET / 200 in 121ms (compile: 4ms, render: 117ms)
+ GET / 200 in 312ms (compile: 5ms, render: 307ms)
+ GET /portfolio 200 in 1148ms (compile: 1048ms, render: 99ms)
+ GET / 200 in 158ms (compile: 4ms, render: 154ms)
+ GET /philosophy 200 in 644ms (compile: 544ms, render: 100ms)
+ GET /portfolio 200 in 59ms (compile: 4ms, render: 55ms)
+ GET / 200 in 99ms (compile: 4ms, render: 95ms)
+ GET /philosophy 200 in 54ms (compile: 4ms, render: 50ms)
+ GET / 200 in 96ms (compile: 4ms, render: 92ms)
