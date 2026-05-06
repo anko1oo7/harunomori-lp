@@ -109,11 +109,11 @@ export default function ConceptPage() {
               <div className="space-y-6">
                 <div className="flex items-center gap-2 text-[var(--accent-deep)] font-bold">
                   <ShieldCheck className="h-5 w-5" />
-                  Quality Responsibility
+                  「Quality Responsibility」
                 </div>
                 <h3 className="text-3xl font-black">「軽やかさ」の裏にある、責任</h3>
                 <p className="text-[var(--ink-soft)] leading-relaxed font-medium">
-                  「軽やかな創作スタイル」は、決して「手を抜く」ことではありません。AIという膨大な可能性の中から、相応しい一瞬を執念を持って選び出す。その責任を果たすため、フル尺制作は月に1件という限定スロットでお受けしています。
+                  「軽やかな創作スタイル」は、決して「手を抜く」ことではありません。AIという膨大な可能性の中から、相応しい一瞬を執念を持って選び出す。その責任を果たすため、プレミアムプラン制作は月に1件という限定スロットでお受けしています。
                 </p>
               </div>
             </div>

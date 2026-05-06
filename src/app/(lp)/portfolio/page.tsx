@@ -1,3 +1,5 @@
+import React from "react";
+import { Youtube, BadgeCheck, Sparkles } from "lucide-react";
 import { works } from "@/lib/works";
 
 export default function Portfolio() {
@@ -43,7 +45,7 @@ export default function Portfolio() {
                 </div>
                 <div className="px-4">
                   <div className="flex items-center gap-2 font-bold text-sm uppercase tracking-wider" style={{ color: work.categoryStyle }}>
-                    {work.category === "フル尺MV" ? (
+                    {work.category === "プレミアムプラン" ? (
                       <BadgeCheck className="h-4 w-4" />
                     ) : (
                       <Sparkles className="h-4 w-4" />
@@ -57,9 +59,9 @@ export default function Portfolio() {
                         key={i} 
                         className="px-3 py-1 rounded-full text-xs font-bold border"
                         style={{ 
-                          backgroundColor: tag === "自主制作作品" ? "var(--sakura)" : (tag.includes("フル") ? "var(--sakura)" : (tag.includes("ローコスト") ? "slate-100" : "var(--sky)")),
-                          color: tag === "自主制作作品" ? "var(--accent-strong)" : (tag.includes("フル") ? "var(--accent-strong)" : (tag.includes("ローコスト") ? "var(--muted)" : "var(--sky-accent)")),
-                          borderColor: tag === "自主制作作品" ? "var(--accent-soft)" : (tag.includes("フル") ? "var(--accent-soft)" : (tag.includes("ローコスト") ? "var(--line)" : "rgba(var(--sky-accent-rgb), 0.2)"))
+                          backgroundColor: tag === "自主制作作品" ? "var(--sakura)" : (tag.includes("プレミアム") ? "var(--sakura)" : (tag.includes("スターター") ? "slate-100" : "var(--sky)")),
+                          color: tag === "自主制作作品" ? "var(--accent-strong)" : (tag.includes("プレミアム") ? "var(--accent-strong)" : (tag.includes("スターター") ? "var(--muted)" : "var(--sky-accent)")),
+                          borderColor: tag === "自主制作作品" ? "var(--accent-soft)" : (tag.includes("プレミアム") ? "var(--accent-soft)" : (tag.includes("スターター") ? "var(--line)" : "rgba(var(--sky-accent-rgb), 0.2)"))
                         }}
                       >
                         {tag}
@@ -77,29 +79,6 @@ export default function Portfolio() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-les className="h-4 w-4" />
-                  ローコストMV (Sample)
-                </div>
-                <h3 className="mt-2 text-2xl font-black">【short Anime MV】 早春の月冠 - Harufloria</h3>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <span className="px-3 py-1 rounded-full bg-[var(--sakura)] text-[var(--accent-strong)] text-xs font-bold border border-[var(--accent-soft)]">自主制作作品</span>
-                  <span className="px-3 py-1 rounded-full bg-slate-100 text-[var(--muted)] text-xs font-bold border border-[var(--line)]">ローコストMV作例（〜60秒）</span>
-                  <span className="px-3 py-1 rounded-full bg-[var(--sky)] text-[var(--sky-accent)] text-xs font-bold border border-[var(--sky-accent)]/20">AI動画ツール活用</span>
-                  <span className="px-3 py-1 rounded-full bg-slate-100 text-[var(--muted)] text-xs font-bold border border-[var(--line)]">制作期間：3日〜1週間程度</span>
-                </div>
-                <p className="mt-6 text-[var(--ink-soft)] leading-relaxed font-medium">
-                  「早春の月冠」をテーマにした、自主制作のショートアニメMVです。
-                  Nano BananaやKlingといった最新のAIツールを駆使し、低予算・短期間ながらも幻想的で情緒豊かな世界観を表現した作例です。<br />
-                  AIならではの緻密な描写とアニメーションを融合させ、楽曲の持つ繊細な雰囲気を視覚的に昇華させました。
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

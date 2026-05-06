@@ -22,27 +22,56 @@ import {
   Feather,
 } from "lucide-react";
 import { works } from "@/lib/works";
+import Link from "next/link";
 
 const plans = [
   {
-    title: "ローコストMV",
+    title: "スタータープラン",
     price: "25,000円",
     delivery: "3日〜1週間程度",
-    note: "カット数少な目、60秒以下。まずはAIアニメを試したい、短納期を希望の方向け。",
+    description: "AIアニメMVをまず試してみたい方向けの、お試しショートプランです。「AIの映像表現に興味はあるけれど、いきなり大きな金額を出すのは不安」という方に向いています。短尺・シンプル構成で、まずは楽曲の雰囲気を映像として形にしたい方におすすめです。",
+    suitableFor: [
+      "AIアニメMVをまず試してみたい方",
+      "短尺で雰囲気のある映像をつけたい方",
+      "やり取りを少なめにして、スムーズに進めたい方"
+    ],
+    notes: [
+      "短尺・シンプル構成を前提としたプランです。",
+      "特殊演出、複雑なストーリー構成、細かな作り込みには対応していません。",
+      "実績公開必須となります。",
+      "ご希望内容によっては上位プランをご案内する場合があります。"
+    ]
   },
   {
-    title: "1コーラスMV",
+    title: "スタンダードプラン",
     price: "77,000円",
     delivery: "1週間〜",
-    note: "楽曲の物語を凝縮。一番人気の標準プラン。",
     featured: true,
+    description: "1コーラスの中で、楽曲の世界観や見せ場をしっかり形にする標準プランです。「せっかくMVを作るなら、安く済ませるだけではなく、ちゃんと印象に残るものにしたい」という方には、まずこちらがおすすめです。限られた尺の中でも、楽曲に合った空気感や世界観を大切にしながら、作品として成立するMVを目指します。",
+    suitableFor: [
+      "オリジナル曲や歌ってみたに、しっかりしたMVをつけたい方",
+      "楽曲の見せ場や空気感を大事にしたい方",
+      "低予算ではなく、作品として満足度の高い映像を作りたい方"
+    ],
+    notes: [
+      "見せ場の設計や、楽曲に合った空気感づくりを重視した、もっともおすすめの主力プランです。"
+    ]
   },
   {
-    title: "フル尺MV",
+    title: "プレミアムプラン",
     price: "132,000円〜",
     delivery: "1ヶ月〜",
-    note: "月に1件限定。一曲の世界観を完遂させる。",
     premium: true,
+    description: "フル尺でしっかり世界観を作り込みたい方向けのプランです。「大切な1曲なので、映像も含めてしっかり作品として届けたい」という本気度の高い方に向いています。フル尺は、単純に尺が長くなるだけではなく、全体設計の重要度が大きくなります。本プランでは内容に合わせて丁寧に向き合いながら制作を進めます。",
+    suitableFor: [
+      "フル尺でMVを作りたい方",
+      "世界観や空気感をより強く打ち出したい方",
+      "記念曲や大切なリリースに合わせて映像にも力を入れたい方"
+    ],
+    notes: [
+      "ご希望内容によって工数が大きく変わるため、132,000円からの個別見積もりとなります。",
+      "月1件限定で制作しています。"
+    ]
   },
 ];
 
@@ -127,13 +156,13 @@ export default function Home() {
                 </div>
                 <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] font-bold text-[var(--ink-soft)]">
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> フル尺: 2件進行中 (6月着手分から予約可)</span>
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> 1コーラス: 要相談</span>
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--leaf-accent)]">●</span> ローコスト: 受注可</span>
+                  <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> プレミアム: 2件進行中 (6月着手分から予約可)</span>
+                  <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> スタンダード: 要相談</span>
+                  <span className="flex items-center gap-1.5"><span className="text-[var(--leaf-accent)]">●</span> スターター: 受注可</span>
                 </div>
                 <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
                 <div className="text-[10px] font-black text-[var(--muted)] uppercase border-l border-[var(--line)] pl-4 md:border-0 md:pl-0">
-                  Last Updated: 2026.04.14
+                  Last Updated: 2026.05.06
                 </div>
               </div>
             </div>
@@ -398,34 +427,72 @@ export default function Home() {
             <p>Pricing</p>
             <h2>料金目安</h2>
           </div>
+
+          <div className="mt-10 max-w-2xl mx-auto text-center reveal" style={{ animationDelay: '0.1s' }}>
+            <p className="text-lg md:text-xl leading-relaxed text-[var(--ink-soft)] font-medium">
+              楽曲の尺や作り込みの深さに合わせて、3つのプランをご用意しています。<br />
+              「まずはAIアニメMVを試してみたい方」から、<br className="hidden md:block" />
+              「しっかり世界観を作り込みたい方」まで、目的に合わせて選びやすい構成にしています。
+            </p>
+          </div>
           
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {plans.map((plan, i) => (
               <div
                 key={plan.title}
-                className={`reveal group rounded-[40px] p-8 transition-all hover:scale-105 ${
+                className={`reveal group rounded-[40px] p-8 md:p-10 transition-all hover:scale-[1.02] ${
                   plan.featured
-                    ? "bg-gradient-to-br from-[var(--sakura)] to-white border-2 border-[var(--accent)] shadow-xl shadow-rose-100"
+                    ? "bg-gradient-to-br from-[var(--sakura)] to-white border-2 border-[var(--accent)] shadow-xl shadow-rose-100 relative z-10"
                     : "bg-white border border-[var(--line)] shadow-sm"
                 }`}
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <h3 className="text-xl font-black">{plan.title}</h3>
-                <div className="mt-8 flex items-baseline gap-1">
-                  <span className="text-4xl font-black tracking-tighter">{plan.price.replace('円', '').replace('〜', '')}</span>
-                  <span className="text-sm font-bold text-[var(--ink-soft)]">円</span>
-                  {plan.price.includes('〜') && <span className="text-sm font-bold text-[var(--ink-soft)]">〜</span>}
-                </div>
                 {plan.featured && (
-                  <span className="mt-2 inline-flex rounded-full bg-[var(--accent-strong)] px-3 py-1 text-[10px] font-black uppercase text-white w-fit">Recommended</span>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex rounded-full bg-[var(--accent-strong)] px-6 py-2 text-xs font-black uppercase tracking-widest text-white shadow-lg">一番おすすめ</div>
                 )}
                 {plan.premium && (
-                  <span className="mt-2 inline-flex rounded-full bg-[var(--ink)] px-3 py-1 text-[10px] font-black uppercase text-white w-fit">Premium Slot</span>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex rounded-full bg-[var(--ink)] px-6 py-2 text-xs font-black uppercase tracking-widest text-white shadow-lg">月1件限定</div>
                 )}
-                <p className="mt-4 text-sm font-bold text-[var(--muted)] leading-relaxed">{plan.note}</p>
-                <div className="mt-6 pt-6 border-t border-[var(--line)]">
-                  <p className="text-xs font-black text-[var(--muted)] uppercase tracking-wider mb-2">Estimated Delivery</p>
-                  <p className="text-lg font-black text-[var(--accent-strong)]">{plan.delivery}</p>
+
+                <h3 className="text-2xl font-black">{plan.title}</h3>
+                <div className="mt-6 flex items-baseline gap-1">
+                  <span className="text-5xl font-[900] tracking-tighter text-[var(--ink)]">{plan.price.replace('円', '').replace('〜', '')}</span>
+                  <span className="text-lg font-bold text-[var(--ink-soft)]">円</span>
+                  {plan.price.includes('〜') && <span className="text-lg font-bold text-[var(--ink-soft)]">〜</span>}
+                </div>
+                
+                <p className="mt-8 text-sm font-bold text-[var(--ink-soft)] leading-relaxed border-l-4 border-[var(--accent-soft)] pl-4">
+                  {plan.description}
+                </p>
+
+                <div className="mt-10 space-y-4">
+                  <p className="text-xs font-black text-[var(--muted)] uppercase tracking-wider">向いている方</p>
+                  <ul className="space-y-3">
+                    {plan.suitableFor.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm font-bold text-[var(--ink-soft)]">
+                        <BadgeCheck className="h-5 w-5 text-[var(--accent-strong)] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-10 pt-8 border-t border-[var(--line)]">
+                  <div className="flex justify-between items-center mb-6">
+                    <div>
+                      <p className="text-[10px] font-black text-[var(--muted)] uppercase tracking-widest mb-1">Estimated Delivery</p>
+                      <p className="text-xl font-black text-[var(--accent-strong)]">{plan.delivery}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {plan.notes.map((note, idx) => (
+                      <p key={idx} className="text-[11px] font-medium text-[var(--muted)] leading-relaxed flex gap-2">
+                        <span className="shrink-0">※</span>
+                        <span>{note}</span>
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -447,6 +514,20 @@ export default function Home() {
                   <span className="font-black text-[var(--accent-strong)]">{opt.price}</span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-16 max-w-3xl mx-auto text-center reveal" style={{ animationDelay: '0.5s' }}>
+            <div className="inline-block rounded-[32px] bg-[var(--accent-soft)]/30 border border-[var(--accent-soft)] p-8 md:p-12">
+              <p className="text-lg md:text-xl leading-relaxed text-[var(--ink-soft)] font-medium">
+                やり取りをできるだけシンプルにするため、事前フォームでご希望内容を確認したうえで、<br className="hidden md:block" />
+                基本的にはおまかせ寄りで制作しています。<br /><br />
+                細かな打ち合わせを重ねるというより、最初に必要な情報を整理して、<br className="hidden md:block" />
+                スムーズに形にしていく進め方です。<br /><br />
+                そのため、<br />
+                <span className="text-[var(--accent-strong)] font-black">「制作側にある程度委ねながら、世界観を形にしたい」</span><br />
+                という方と相性がいいです。
+              </p>
             </div>
           </div>
         </div>
@@ -525,7 +606,14 @@ export default function Home() {
             あなたの楽曲、<br className="md:hidden" />
             <span className="text-[var(--accent-strong)]">アニメの世界へ。</span>
           </h2>
-          <p className="mt-8 text-lg font-bold text-[var(--ink-soft)] relative z-10">
+          <p className="mt-8 text-lg md:text-xl font-bold text-[var(--ink-soft)] relative z-10 leading-relaxed">
+            「こういう曲でも合うかな？」という段階でも大丈夫です。<br /><br />
+            事前フォームでご希望内容を確認しながら、<br className="hidden md:block" />
+            できるだけやり取りをシンプルにしつつ、楽曲の世界観に合った形をご提案します。<br /><br />
+            まだ依頼するか迷っている段階でも、お気軽にどうぞ。
+          </p>
+          
+          <p className="mt-8 text-sm font-bold text-[var(--muted)] relative z-10">
             お問い合わせはGoogleフォームより受け付けています。<br />
             連絡手段（メール・Discord）もご希望に合わせてお選びいただけます。
           </p>
