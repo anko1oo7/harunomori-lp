@@ -166,16 +166,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <h1 className="mt-8 text-[clamp(2rem,6vw,4.5rem)] font-[900] leading-[1.1] tracking-[-0.05em]">
-              AIアニメ制作を <br />
+            <h1 className="mt-8 text-[clamp(2.2rem,6vw,4.5rem)] font-[900] leading-[1.1] tracking-[-0.05em]">
+              AIアニメ制作を<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-strong)] to-[var(--sky-accent)]">
                 もっと軽やかに。
               </span>
             </h1>
-            <p className="mt-8 max-w-xl text-lg md:text-xl leading-relaxed text-[var(--ink-soft)] font-medium">
-              あなたの楽曲やキャラクターの魅力を、AIの魔法でフルアニメMVに。
-              難しいことは考えず、まずは「ふんわり」としたイメージから始めてみませんか？
-            </p>
+            <div className="mt-8 max-w-xl text-lg md:text-xl leading-relaxed text-[var(--ink-soft)] font-medium space-y-6">
+              <p>
+                歌い手さん・Vtuberさん・個人クリエイターさん向けに、<br className="hidden md:block" />
+                世界観のあるAIアニメMVを制作しています。
+              </p>
+              <p>
+                あなたの楽曲やキャラクターの魅力を、<br className="hidden md:block" />
+                AIの表現で映像として形にします。
+              </p>
+              <p>
+                難しいことは考えすぎず、まずは「こんな雰囲気にしたい」という、<br className="hidden md:block" />
+                ふんわりしたイメージからでも大丈夫です。
+              </p>
+              <p>
+                楽曲の温度感や空気感を大切にしながら、<br className="hidden md:block" />
+                事前整理をもとにスムーズに制作を進めています。
+              </p>
+            </div>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#pricing"
