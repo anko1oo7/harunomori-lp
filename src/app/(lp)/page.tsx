@@ -27,7 +27,7 @@ import Link from "next/link";
 const plans = [
   {
     title: "スタータープラン",
-    price: "25,000円",
+    price: "29,800円",
     delivery: "3日〜1週間程度",
     description: "AIアニメMVをまず試してみたい方向けの、お試しショートプランです。「AIの映像表現に興味はあるけれど、いきなり大きな金額を出すのは不安」という方に向いています。短尺・シンプル構成で、まずは楽曲の雰囲気を映像として形にしたい方におすすめです。",
     suitableFor: [
@@ -44,7 +44,7 @@ const plans = [
   },
   {
     title: "スタンダードプラン",
-    price: "77,000円",
+    price: "66,000円",
     delivery: "1週間〜",
     featured: true,
     description: "1コーラスの中で、楽曲の世界観や見せ場をしっかり形にする標準プランです。「せっかくMVを作るなら、安く済ませるだけではなく、ちゃんと印象に残るものにしたい」という方には、まずこちらがおすすめです。限られた尺の中でも、楽曲に合った空気感や世界観を大切にしながら、作品として成立するMVを目指します。",
@@ -149,20 +149,47 @@ export default function Home() {
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="reveal">
             <div className="space-y-4">
-              <div className="inline-flex flex-wrap items-center gap-y-2 gap-x-4 rounded-3xl bg-white/50 backdrop-blur-md px-6 py-3 border border-[var(--accent-soft)] shadow-sm">
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></div>
-                  <span className="text-xs font-black uppercase tracking-tight text-[var(--accent-strong)]">Current Status</span>
+              <div className="relative group inline-block">
+                <div className="inline-flex flex-wrap items-center gap-y-2 gap-x-4 rounded-3xl bg-white/50 backdrop-blur-md px-6 py-3 border border-[var(--accent-soft)] shadow-sm cursor-help transition-all hover:bg-white/80">
+                  <div className="flex items-center gap-2">
+                    <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <span className="text-xs font-black uppercase tracking-tight text-[var(--accent-strong)]">Current Status</span>
+                  </div>
+                  <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] font-bold text-[var(--ink-soft)]">
+                    <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> プレミアム: 2件進行中 (7月着手分から予約可)</span>
+                    <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> スタンダード: 要相談</span>
+                    <span className="flex items-center gap-1.5"><span className="text-[var(--leaf-accent)]">●</span> スターター: 受注可</span>
+                  </div>
+                  <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
+                  <div className="text-[10px] font-black text-[var(--muted)] uppercase border-l border-[var(--line)] pl-4 md:border-0 md:pl-0">
+                    Last Updated: 2026.06.02
+                  </div>
                 </div>
-                <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] font-bold text-[var(--ink-soft)]">
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> プレミアム: 2件進行中 (6月着手分から予約可)</span>
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> スタンダード: 要相談</span>
-                  <span className="flex items-center gap-1.5"><span className="text-[var(--leaf-accent)]">●</span> スターター: 受注可</span>
-                </div>
-                <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
-                <div className="text-[10px] font-black text-[var(--muted)] uppercase border-l border-[var(--line)] pl-4 md:border-0 md:pl-0">
-                  Last Updated: 2026.06.01
+                
+                {/* Sleek Tooltip for Update History */}
+                <div className="absolute top-full left-0 mt-2 w-80 rounded-2xl bg-white/95 backdrop-blur-md border border-[var(--accent-soft)] p-5 shadow-xl opacity-0 translate-y-2 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto z-50 text-left">
+                  <p className="text-xs font-black text-[var(--accent-strong)] uppercase tracking-wider mb-3">Update History / 更新履歴</p>
+                  <div className="space-y-3.5">
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-black text-[var(--muted)]">2026.06.02 (最新)</p>
+                      <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
+                        プレミアムプランの受付状況を「7月着手分から予約可」に更新。
+                      </p>
+                    </div>
+                    <div className="border-t border-[var(--line)] pt-3 space-y-1">
+                      <p className="text-[10px] font-black text-[var(--muted)]">2026.06.01</p>
+                      <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
+                        利用規約・FAQの法的表示強化、大切なお知らせの改定、制作日記 note 連携の価値訴求を追加。
+                      </p>
+                    </div>
+                    <div className="border-t border-[var(--line)] pt-3 space-y-1">
+                      <p className="text-[10px] font-black text-[var(--muted)]">2026.05.06</p>
+                      <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
+                        スタータープランの受付体制を強化、各プラン納期目安の調整。
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
