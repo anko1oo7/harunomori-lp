@@ -104,7 +104,7 @@ const flow = [
   {
     step: "02",
     title: "整理",
-    body: "内容を確認し、進め方と対応範囲を整えます。",
+    body: "内容を確認し、進め方・対応範囲・ご提供素材の使用可否を整理します。参考資料がある場合は、再現ではなく、色味・テンポ感・空気感などの要素に分解して制作方針を決めます。",
   },
   {
     step: "03",
@@ -162,7 +162,7 @@ export default function Home() {
                 </div>
                 <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
                 <div className="text-[10px] font-black text-[var(--muted)] uppercase border-l border-[var(--line)] pl-4 md:border-0 md:pl-0">
-                  Last Updated: 2026.05.06
+                  Last Updated: 2026.06.01
                 </div>
               </div>
             </div>
@@ -428,6 +428,21 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+
+                <div className="space-y-6">
+                  <h4 className="flex items-center gap-3 text-lg font-black border-b border-[var(--line)] pb-2 pr-4 w-fit">
+                    <BookOpen className="h-5 w-5 text-[var(--leaf-accent)]" />
+                    制作日記・プロセス公開
+                  </h4>
+                  <div className="rounded-3xl bg-white/50 p-6 border border-white">
+                    <p className="text-lg font-bold leading-relaxed text-[var(--ink-soft)]">
+                      制作後には、可能な範囲で制作日記を公開し、どのように楽曲を解釈し、映像へ落とし込んだかを記録しています。
+                    </p>
+                    <p className="mt-4 text-sm font-medium leading-relaxed text-[var(--muted)]">
+                      AI任せにするのではなく、企画・演出・編集という人間の意思による創作プロセスを大切にしています。
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -584,7 +599,25 @@ export default function Home() {
             <h2>大切なお知らせ</h2>
           </div>
           
-          <div className="mt-16 space-y-4 reveal">
+          <div className="mt-16 p-8 rounded-[32px] bg-[var(--accent-soft)]/20 border border-[var(--accent-soft)]/50 reveal space-y-6 text-left">
+            <p className="text-lg font-black text-[var(--accent-strong)] flex items-center gap-2">
+              <Sparkles className="h-5 w-5 shrink-0" />
+              本サービスでは、制作工程の一部に生成AIを使用します。
+            </p>
+            <div className="space-y-4 text-sm font-bold leading-relaxed text-[var(--ink-soft)]">
+              <p>
+                ・既存のMV・アニメ・イラスト・特定クリエイターの表現をそのまま再現・模倣するご依頼はお受けできません。
+              </p>
+              <p>
+                ・参考資料は、色味・雰囲気・テンポ感・世界観を把握するために使用し、具体的な構図やデザインは楽曲に合わせて再構成します。
+              </p>
+              <p>
+                ・ご提供いただく楽曲・歌詞・キャラクター画像・ロゴ等は、依頼者様ご自身で、動画制作・AI生成補助・公開・商用利用に必要な権利または許諾をご確認ください。
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-8 space-y-4 reveal">
             {[
               "AI生成特有の、細部や装飾のゆらぎが発生する場合があります。",
               "キャラクターや衣装の完全な固定より、全体の印象を優先します。",
