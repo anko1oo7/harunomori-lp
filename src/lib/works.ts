@@ -10,6 +10,15 @@ export interface Work {
 
 export const works: Work[] = [
   {
+    id: "rinyushoku",
+    title: "咲耶 - 『星の離乳食』",
+    embedId: "3iHbuneoLVc",
+    category: "プレミアムプラン",
+    categoryStyle: "var(--sky-accent)",
+    tags: ["キャラリデザイン", "再解釈：レメディオス・バロ『星粥』", "おまかせ・数回修正"],
+    description: "既存のキャラクターを楽曲の象徴的な世界観に合わせてリデザイン。シュルレアリスムの画家レメディオス・バロの傑作『星粥』をインスピレーションの源泉とし、映像テーマに錬金術や占星術を採用。その幻想的で神秘的な空気感を現代のAI技術で再解釈しました。「おまかせ」の信頼を軸に、細部への数回のこだわりを経て完成。アーティストの持つ哲学を、一枚の絵画から一本のアニメーションへと昇華させた作品です。",
+  },
+  {
     id: "maybe",
     title: "Maybe - Full animation Ver. High-Speed GO Million (feat. XXX)",
     embedId: "f-_RxbNK8lg",

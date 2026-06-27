@@ -157,13 +157,13 @@ export default function Home() {
                   </div>
                   <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] font-bold text-[var(--ink-soft)]">
-                    <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> プレミアム: 2件進行中 (7月着手分から予約可)</span>
-                    <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> スタンダード: 要相談</span>
+                    <span className="flex items-center gap-1.5"><span className="text-[var(--accent-strong)]">●</span> プレミアム: 1件進行中</span>
+                    <span className="flex items-center gap-1.5"><span className="text-[var(--sky-accent)]">●</span> スタンダード: 受付可</span>
                     <span className="flex items-center gap-1.5"><span className="text-[var(--leaf-accent)]">●</span> スターター: 受注可</span>
                   </div>
                   <div className="h-4 w-px bg-[var(--line)] hidden md:block"></div>
                   <div className="text-[10px] font-black text-[var(--muted)] uppercase border-l border-[var(--line)] pl-4 md:border-0 md:pl-0">
-                    Last Updated: 2026.06.02
+                    Last Updated: 2026.06.27
                   </div>
                 </div>
                 
@@ -172,7 +172,13 @@ export default function Home() {
                   <p className="text-xs font-black text-[var(--accent-strong)] uppercase tracking-wider mb-3">Update History / 更新履歴</p>
                   <div className="space-y-3.5">
                     <div className="space-y-1">
-                      <p className="text-[10px] font-black text-[var(--muted)]">2026.06.02 (最新)</p>
+                      <p className="text-[10px] font-black text-[var(--muted)]">2026.06.27 (最新)</p>
+                      <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
+                        プレミアムプランの受付状況を「1件進行中」、スタンダードを「受付可」に更新。制作実績に『星の離乳食』を追加。
+                      </p>
+                    </div>
+                    <div className="border-t border-[var(--line)] pt-3 space-y-1">
+                      <p className="text-[10px] font-black text-[var(--muted)]">2026.06.02</p>
                       <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
                         プレミアムプランの受付状況を「7月着手分から予約可」に更新。
                       </p>
@@ -181,12 +187,6 @@ export default function Home() {
                       <p className="text-[10px] font-black text-[var(--muted)]">2026.06.01</p>
                       <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
                         利用規約・FAQの法的表示強化、大切なお知らせの改定、制作日記 note 連携の価値訴求を追加。
-                      </p>
-                    </div>
-                    <div className="border-t border-[var(--line)] pt-3 space-y-1">
-                      <p className="text-[10px] font-black text-[var(--muted)]">2026.05.06</p>
-                      <p className="text-[11px] font-bold text-[var(--ink-soft)] leading-relaxed">
-                        スタータープランの受付体制を強化、各プラン納期目安の調整。
                       </p>
                     </div>
                   </div>
